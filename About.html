@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HoopFinder</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Matija Tometić">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="loptica.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section class="bck">
+        <section class="header">
+            <nav>
+                <a href="Html dio.html"><img src="Hoop.ico"></a>
+                <div class="nav-links" id="navlinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="Html dio.html">HOME</a></li>
+                        <li><a href="submit_match.html">SUBMIT MATCHES</a></li>
+                        <li><a href="display_matches.html">DISPLAY MATCHES</a></li>
+                        <li><a href="About.html">ABOUT US</a></li>
+                        <li><a href="vau vau.html">NEWS</a></li>
+                        <li><a href="registracija.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showmenu()"></i>
+            </nav>
+            <div id="video-container">
+                <video width="30%" controls autoplay loop muted poster="Hoop.ico">
+                    <source src="video.mp4" type="video/mp4">Your browser does not support the video tag.
+                </video>
+            </div>
+        
+            <div class="txt-container">
+                <h2>Discover Hoops</h2>
+                <p>Welcome to our page dedicated to basketball lovers and hoop enthusiasts! With our website, we have created a unique space that facilitates finding basketball courts and connecting players who share the same passion. We understand that finding a suitable court and partners for basketball at a specific time can be challenging, so we decided to create a platform that will connect players around the world.</p><hr>
+        
+                <h3>Effortless Connections</h3>
+                <p>Our website offers a simple and intuitive search system that allows you to quickly find a court in your area and players interested in basketball games. You no longer have to waste time looking for someone who shares your passion on the same court. Simply enter the location and time, and we will provide you with what you're looking for.</p><hr>
+        
+                <h4>Unveiling the Heart and Soul Behind Our Basketball Community</h4>
+                <p>Whether you are a beginner or an experienced basketball enthusiast, our website provides a space for knowledge.</p><hr>
+            </div>
+            <div>
+                <footer style="position: absolute;">
+                    <p>Copyright &copy; 2024 Matija Tometić</p>
+                </footer>
+            </div>
+            </section>
+    </section>
+    <script>
+        var navlinks=document.getElementById("navlinks");
+
+        function showmenu(){
+            navlinks.style.right="0";
+        }
+
+        function hideMenu(){
+            navlinks.style.right="-200px";
+        }
+    </script>
+</body>

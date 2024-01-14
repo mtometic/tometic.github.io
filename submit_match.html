@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HoopFinder</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Matija Tometić">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="loptica.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section class="bck">
+        <section class="header">
+            <nav>
+                <a href="Html dio.html"><img src="Hoop.ico"></a>
+                <div class="nav-links" id="navlinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="Html dio.html">HOME</a></li>
+                        <li><a href="submit_match.html">SUBMIT MATCHES</a></li>
+                        <li><a href="display_matches.html">DISPLAY MATCHES</a></li>
+                        <li><a href="About.html">ABOUT US</a></li>
+                        <li><a href="vau vau.html">NEWS</a></li>
+                        <li><a href="registracija.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showmenu()"></i>
+            </nav>
+    <header>
+        <h1 style="color: aliceblue; text-align: center;">Basketball Matches - Submit</h1>
+    </header>
+    
+    <div class="match" style="color: aliceblue;">
+        <form style="text-align: center;" id="matchForm">
+            <label for="teamA">Team A:</label>
+            <input type="text" id="teamA" name="teamA" required style="background-color: black; color: white; text-align: center;"><br><br>
+            <label for="teamB">Team B:</label>
+            <input type="text" id="teamB" name="teamB" required style="background-color: black; color: white; text-align: center;"><br><br>
+            <label for="date">Date & Time:</label>
+            <input type="datetime-local" id="date" name="date" required style="background-color: black; color: white; text-align: center;"><br><br>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" style="background-color: black; color: white; text-align: center;"><br><br>
+            <input type="submit" value="Submit" style="background-color: black; color: white; text-align: center;"><br><br>
+        </form>
+    </div>
+
+    <script>
+
+        var navlinks=document.getElementById("navlinks");
+
+        function showmenu(){
+            navlinks.style.right="0";
+        }
+
+        function hideMenu(){
+            navlinks.style.right="-200px";
+        }
+
+        document.getElementById('matchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const teamA = document.getElementById('teamA').value;
+            const teamB = document.getElementById('teamB').value;
+            const date = document.getElementById('date').value;
+            const location = document.getElementById('location').value;
+
+            const match = {
+                teamA: teamA,
+                teamB: teamB,
+                date: date,
+                location: location
+            };
+
+            let matchRequests = JSON.parse(localStorage.getItem('matchRequests')) || [];
+            matchRequests.push(match);
+            localStorage.setItem('matchRequests', JSON.stringify(matchRequests));
+
+            window.location.href = 'display_matches.html';
+        });
+    </script>
+
+<div>
+    <footer style="position: absolute;">
+        <p>Copyright &copy; 2024 Matija Tometić</p>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration | HoopFinder</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Matija Tometić">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="loptica.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <body>
+        <section class="bck">
+            <section class="header">
+                <nav>
+                    <a href="Html dio.html"><img src="Hoop.ico"></a>
+                    <div class="nav-links" id="navlinks">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="Html dio.html">HOME</a></li>
+                            <li><a href="submit_match.html">SUBMIT MATCHES</a></li>
+                            <li><a href="display_matches.html">DISPLAY MATCHES</a></li>
+                            <li><a href="About.html">ABOUT US</a></li>
+                            <li><a href="vau vau.html">NEWS</a></li>
+                            <li><a href="registracija.html">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                    <i class="fa fa-bars" onclick="showmenu()"></i>
+                </nav>
+    <h1 style="text-align: center; color: rgb(255, 255, 255); font-family:Georgia, 'Times New Roman', Times, serif;">Contact Form</h1><br>
+	<main>
+		<div id="contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1513.2340187125928!2d15.997754431362534!3d45.82619510053229!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d7a3ebd187eb%3A0x7b2a39b56aea1f81!2sO%C5%A0%20Jordanovac!5e1!3m2!1shr!2shr!4v1705238593006!5m2!1shr!2shr" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+			<form>
+				<br><label for="fname">First Name *</label><br>
+				<input type="text" id="fname" name="firstname" placeholder="Your name" required style="background-color: black; color: white; text-align: center;"><br><br>
+
+				<label for="lname">Last Name *</label><br>
+				<input type="text" id="lname" name="lastname" placeholder="Your last name" required style="background-color: black; color: white; text-align: center;"><br><br>
+				
+                <label for="country">Country</label><br>
+				<select id="country" name="country" style="background-color: black; color: white; text-align: center;">
+                  <option value="HR" selected>Croatia</option>
+                  <option value="">Please select</option>
+				  <option value="ITA">Italy</option>
+				  <option value="FRA">France</option>
+				  <option value="SRB">Serbia</option>
+				</select><br><br>
+
+				<label for="email">Your E-mail *</label><br>
+				<input type="email" id="email" name="email" placeholder="Your e-mail" required style="background-color: black; color: white; text-align: center;"><br><br>
+
+
+				<label for="subject">Subject</label><br>
+				<textarea id="subject" name="subject" placeholder="Your text" style="background-color: black; color: white; text-align: center; height:200px"></textarea><br><br>
+
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+	</main>
+
+<div>
+    <footer>
+        <p>Copyright &copy; 2024 Matija Tometić</p>
+    </footer>
+</div>
+
+<script>
+    var navlinks=document.getElementById("navlinks");
+
+    function showmenu(){
+        navlinks.style.right="0";
+    }
+
+    function hideMenu(){
+        navlinks.style.right="-200px";
+    }
+</script>
+</body>
+</html>

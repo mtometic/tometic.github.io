@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HoopFinder</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Matija Tometić">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="loptica.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <body>
+        <section class="bck">
+            <section class="header">
+                <nav>
+                    <a href="Html dio.html"><img src="Hoop.ico"></a>
+                    <div class="nav-links" id="navlinks">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="Html dio.html">HOME</a></li>
+                            <li><a href="submit_match.html">SUBMIT MATCHES</a></li>
+                            <li><a href="display_matches.html">DISPLAY MATCHES</a></li>
+                            <li><a href="About.html">ABOUT US</a></li>
+                            <li><a href="vau vau.html">NEWS</a></li>
+                            <li><a href="registracija.html">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                    <i class="fa fa-bars" onclick="showmenu()"></i>
+                </nav>
+    <header>
+        <h1 style="color: white; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Matches</h1>
+    </header>
+    
+    <div id="displayMatches">
+    </div>
+
+    <script>
+
+        var navlinks=document.getElementById("navlinks");
+
+        function showmenu(){
+            navlinks.style.right="0";
+        }
+
+        function hideMenu(){
+            navlinks.style.right="-200px";
+        }
+
+        const displayDiv = document.getElementById('displayMatches');
+        const matchRequests = JSON.parse(localStorage.getItem('matchRequests')) || [];
+
+
+        function acceptMatch(index) {
+            console.log(`Accepted match at index ${index}`);
+        }
+
+
+        matchRequests.forEach((match, index) => {
+            const matchDiv = document.createElement('div');
+            matchDiv.classList.add('match');
+            matchDiv.innerHTML = `
+                <div style="color:white;">Team A: ${match.teamA}</div>
+                <div style="color:white;">Team B: ${match.teamB}</div>
+                <div style="color:white;">Date & Time: ${match.date}</div>
+                <div style="color:white;">Location: ${match.location}</div>
+                <hr>
+            `;
+            displayDiv.appendChild(matchDiv);
+        });
+    </script>
+<footer>
+    <p>Copyright &copy; 2024 Matija Tometić</p>
+</footer>
+</body>
+</html>
